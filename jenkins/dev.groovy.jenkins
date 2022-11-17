@@ -6,12 +6,15 @@ pipeline {
                 cron('H/15 * * * *')
                 }
                 
-        stage ('Prepare WS') {
+      
+             
+    stages {
+    
+      stage ('Prepare WS') {
              println 'clean workspace'
              cleanWs()
              }
              
-    stages {
         stage('Build') {
             steps {
                 echo 'Hello World'
