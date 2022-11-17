@@ -11,8 +11,10 @@ pipeline {
     stages {
     
       stage ('Prepare WS') {
-             println 'clean workspace'
-             cleanWs()
+            steps{
+                 println 'clean workspace'
+                 cleanWs()
+                 }
              }
              
         stage('Build') {
