@@ -1,0 +1,30 @@
+pipeline {
+    
+    agent any
+    
+        triggers { 
+                cron('H/15 * * * *')
+                }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                 sh 'echo "This is my test step"'
+            }
+            }
+            
+            stage('Deploy') {
+            steps {
+                 sh 'echo "This is my Deploy step"'
+            }
+            
+            }
+            
+        }
+    }
+ 
