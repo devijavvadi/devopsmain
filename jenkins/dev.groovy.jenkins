@@ -6,7 +6,11 @@ pipeline {
                 cron('H/15 * * * *')
                 }
                 
-                cleanWs()
+        stage ('Prepare WS') {
+             println 'clean workspace'
+             cleanWs()
+             }
+             
     stages {
         stage('Build') {
             steps {
