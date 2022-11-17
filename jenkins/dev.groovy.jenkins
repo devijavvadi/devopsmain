@@ -5,6 +5,8 @@ pipeline {
         triggers { 
                 cron('H/15 * * * *')
                 }
+                
+                cleanWs()
     stages {
         stage('Build') {
             steps {
